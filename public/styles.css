@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,500;1,300;1,500&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+#cover {
+    width: 100%;
+    height: 100vh;
+    box-shadow: inset 0 0 200px #111;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+#top-left {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    color: #ffffff;
+    text-shadow: #111 2px 2px 5px;
+}
+
+#top-left #title {
+    font-size: 20pt;
+}
+
+#top-left #subtitle {
+    font-size: 12pt;
+    font-weight: 200;
+    font-style: italic;
+}
+
+#gallery {
+}
