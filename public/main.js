@@ -72,3 +72,11 @@ const buildMasonry = () => {
 
 buildMasonry();
 window.addEventListener("resize", buildMasonry, {passive: true});
+
+const fadeWithScroll = document.querySelectorAll(".fade-with-scroll");
+document.addEventListener("scroll", event => {
+    const opacity = Math.max(1 - 1.8 * window.scrollY / window.innerHeight, 0) * 100 + "%";
+    for(const element of fadeWithScroll) {
+        element.style.opacity = opacity;
+    }
+}, {passive: true});

@@ -26,7 +26,7 @@ body::-webkit-scrollbar {
 }
 
 #top-left {
-    position: absolute;
+    position: fixed;
     top: 1.5rem;
     left: 2rem;
     color: #ffffff;
@@ -77,4 +77,14 @@ h1 {
     text-align: center;
     margin: 0;
     padding: 3em;
+}
+
+#scroll-down-arrow {
+    width: 100%;
+    position: absolute;
+    bottom: 1rem;
+    z-index: 2;
+    color: #ffffff;
+    text-align: center;
+    font-size: 3em;
 }
