@@ -2,9 +2,13 @@ const cover = document.getElementById("cover");
 let cover1 = document.getElementById("cover1"),
     cover2 = document.getElementById("cover2");
 
+const portraitBackgrounds = IMAGES.filter(image => image.height > image.width).map(image => image.bigUrl),
+      landscapeBackgrounds = IMAGES.filter(image => image.width > image.height).map(image => image.bigUrl);
+
 const getBackground = () => {
-    const image = DATA.backgrounds.shift();
-    DATA.backgrounds.push(image);
+    const set = window.innerWidth > window.innerHeight ? landscapeBackgrounds : portraitBackgrounds;
+    const image = set.shift();
+    set.push(image);
     return image;
 };
 
@@ -48,7 +52,7 @@ const buildMasonry = () => {
     }
 
     const heights = new Array(numColumns).fill(0)
-    for(const image of DATA.images) {
+    for(const image of IMAGES) {
 
         // find the shortest column
         let shortest = 0, shortestHeight = Infinity;
@@ -61,7 +65,7 @@ const buildMasonry = () => {
 
         // add image
         const img = document.createElement("img");
-        img.src = image.url;
+        img.src = image.smallUrl;
         img.loading = "lazy";
         columns[shortest].append(img);
         heights[shortest] += image.height;
