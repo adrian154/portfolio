@@ -3,12 +3,23 @@
 body {
     margin: 0;
     font-family: 'Libre Franklin', sans-serif;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 #cover {
     width: 100%;
     height: 100vh;
     box-shadow: inset 0 0 200px #111;
+}
+
+#cover div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -20,6 +31,7 @@ body {
     left: 1.5rem;
     color: #ffffff;
     text-shadow: #111 2px 2px 5px;
+    z-index: 2;
 }
 
 #top-left #title {
