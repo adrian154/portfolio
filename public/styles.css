@@ -28,21 +28,53 @@ body::-webkit-scrollbar {
 #top-left {
     position: absolute;
     top: 1.5rem;
-    left: 1.5rem;
+    left: 2rem;
     color: #ffffff;
     text-shadow: #111 2px 2px 5px;
     z-index: 2;
 }
 
 #top-left #title {
-    font-size: 20pt;
+    font-size: 22pt;
 }
 
 #top-left #subtitle {
-    font-size: 12pt;
+    font-size: 13pt;
     font-weight: 200;
     font-style: italic;
 }
 
-#gallery {
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column img {
+    max-width: 100%;
+    padding: 0.5em;
+}
+
+#columns-container {
+    display: flex;
+    max-width: 90%;
+    margin: 2em auto;
+    flex-direction: row;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 500;
+    margin-top: 1.5em;
+}
+
+#footer {
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#footer p {
+    text-align: center;
+    margin: 0;
+    padding: 3em;
 }
