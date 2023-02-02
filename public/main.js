@@ -9,28 +9,18 @@ const getBackground = () => {
     return image;
 };
 
-const fadeOut = element => {
-    let frame = 0;
-    const animate = () => {
-        element.style.opacity = `${(60 - frame) / 60 * 100}%`;
-        frame++;
-        if(frame < 60) {
-            requestAnimationFrame(animate);
-        }
-    };
-    animate();
-};
-
 const updateCoverImage = () => {
 
     // fade out current image
-    fadeOut(cover1);
+    cover1.style.opacity = 0;
     cover2.style.opacity = 1;
 
     setTimeout(() => {
+        cover1.style.transition = "";
+        cover2.style.transition = "opacity 1s";
         cover1.style.backgroundImage = `url(${getBackground()})`;
+        cover.append(cover1, cover2);
         [cover1, cover2] = [cover2, cover1];
-        cover.append(cover2, cover1);
     }, 1000);
 
 };
