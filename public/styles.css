@@ -61,22 +61,25 @@ body::-webkit-scrollbar {
     flex-direction: row;
 }
 
-h1 {
-    text-align: center;
-    font-weight: 500;
+#gallery {
     padding-top: 1.5em;
 }
 
-#footer {
+h1 {
+    font-weight: 500;
+}
+
+#bottom {
     width: 100%;
     background-color: #000000;
     color: #ffffff;
 }
 
-#footer p {
+#footer {
     text-align: center;
     margin: 0;
     padding: 3em;
+    color: #aaaaaa;
 }
 
 #scroll-down-arrow {
@@ -90,8 +93,16 @@ h1 {
 }
 
 #about {
-    background-color: #222;
-    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    max-width: 50em;
+    margin: auto;
+    padding: 2em;
+}
+
+#about img {
+    max-width: 25%;
+    margin-right: 3em;
 }
 
 #about p {
@@ -100,4 +111,8 @@ h1 {
 
 b {
     font-weight: 500;
+}
+
+a, a:visited {
+    color: #ffffff;
 }
