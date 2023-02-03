@@ -64,7 +64,7 @@ body::-webkit-scrollbar {
 h1 {
     text-align: center;
     font-weight: 500;
-    margin-top: 1.5em;
+    padding-top: 1.5em;
 }
 
 #footer {
@@ -87,4 +87,17 @@ h1 {
     color: #ffffff;
     text-align: center;
     font-size: 3em;
+}
+
+#about {
+    background-color: #222;
+    color: #ffffff;
+}
+
+#about p {
+    font-weight: 200;
+}
+
+b {
+    font-weight: 500;
 }
