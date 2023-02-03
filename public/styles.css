@@ -95,13 +95,13 @@ h1 {
 #about {
     display: flex;
     flex-direction: row;
-    max-width: 50em;
+    max-width: 55em;
     margin: auto;
     padding: 2em;
 }
 
 #about img {
-    max-width: 25%;
+    max-width: 35%;
     margin-right: 3em;
 }
 
