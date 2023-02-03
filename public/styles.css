@@ -116,3 +116,13 @@ b {
 a, a:visited {
     color: #ffffff;
 }
+
+@media (max-width: 600px) {
+    #about {
+        flex-direction: column;
+    }
+
+    #about img {
+        max-width: unset;
+    }
+}
